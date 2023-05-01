@@ -1,0 +1,86 @@
+import { CreateUpdateProject } from 'api/schema';
+import { FormValues } from './form';
+
+export const normalizeFormValues = (
+  values: FormValues,
+): CreateUpdateProject => {
+  return {
+    name: values.name,
+    description: values.description,
+    ahv_avg_fuel_consumption: Number(values.ahv_avg_fuel_consumption),
+    ahv_day_rate: Number(values.ahv_day_rate),
+    ahv_no_days_per_location: Number(values.ahv_no_days_per_location),
+    ahv_no_used: Number(values.ahv_no_used),
+    co2_emission_per_m3_fuel: Number(values.co2_emission_per_m3_fuel),
+    co2_emission_per_tonne_fuel: Number(values.co2_emission_per_tonne_fuel),
+    co2_tax: Number(values.co2_tax),
+    fuel_density: Number(values.fuel_density),
+    fuel_total_price: Number(values.fuel_total_price),
+    helicopter_avg_fuel_consumption: Number(
+      values.helicopter_avg_fuel_consumption,
+    ),
+    helicopter_fuel_price: Number(values.helicopter_fuel_price),
+    helicopter_no_flights_per_week: Number(
+      values.helicopter_no_flights_per_week,
+    ),
+    helicopter_rate_per_trip: Number(values.helicopter_rate_per_trip),
+    helicopter_cruise_speed: Number(values.helicopter_cruise_speed),
+    helicopter_types: values.helicopter_types,
+    marine_diesel_oil_price: Number(values.marine_diesel_oil_price),
+    nox_tax: Number(values.nox_tax),
+    psv_fuel_price: Number(values.psv_fuel_price),
+    psv_avg_fuel_transit_consumption: Number(
+      values.psv_avg_fuel_transit_consumption,
+    ),
+    psv_avg_fuel_dp_consumption: Number(values.psv_avg_fuel_dp_consumption),
+    psv_calls_per_week: Number(values.psv_calls_per_week),
+    psv_day_rate: Number(values.psv_day_rate),
+    psv_speed: Number(values.psv_speed),
+    psv_loading_time: Number(values.psv_loading_time),
+    psv_types: values.psv_types,
+    tugs_day_rate: Number(values.tugs_day_rate),
+    tugs_avg_move_fuel_consumption: Number(
+      values.tugs_avg_move_fuel_consumption,
+    ),
+    tugs_avg_transit_fuel_consumption: Number(
+      values.tugs_avg_transit_fuel_consumption,
+    ),
+    tugs_move_speed: Number(values.tugs_move_speed),
+    tugs_transit_speed: Number(values.tugs_transit_speed),
+  };
+};
+
+export const emptyFormValues: FormValues = {
+  name: '',
+  description: '',
+  ahv_avg_fuel_consumption: '',
+  ahv_day_rate: '',
+  ahv_no_days_per_location: '',
+  ahv_no_used: '',
+  co2_emission_per_m3_fuel: '',
+  co2_emission_per_tonne_fuel: '',
+  co2_tax: '',
+  fuel_density: '',
+  fuel_total_price: '',
+  helicopter_avg_fuel_consumption: '',
+  helicopter_fuel_price: '',
+  helicopter_no_flights_per_week: '',
+  helicopter_rate_per_trip: '',
+  helicopter_types: '',
+  helicopter_cruise_speed: '',
+  marine_diesel_oil_price: '',
+  nox_tax: '',
+  psv_fuel_price: '',
+  psv_calls_per_week: '',
+  psv_day_rate: '',
+  psv_types: '',
+  psv_avg_fuel_transit_consumption: '',
+  psv_avg_fuel_dp_consumption: '',
+  psv_speed: '',
+  psv_loading_time: '',
+  tugs_day_rate: '',
+  tugs_avg_move_fuel_consumption: '',
+  tugs_avg_transit_fuel_consumption: '',
+  tugs_move_speed: '',
+  tugs_transit_speed: '',
+};

@@ -1,0 +1,12 @@
+diff --git a/node_modules/antd/lib/notification/index.d.ts b/node_modules/antd/lib/notification/index.d.ts
+index 7c82a1a..5f8f0e1 100644
+--- a/node_modules/antd/lib/notification/index.d.ts
++++ b/node_modules/antd/lib/notification/index.d.ts
+@@ -1,6 +1,6 @@
+ import * as React from 'react';
+ import { NotificationInstance as RCNotificationInstance } from 'rc-notification/lib/Notification';
+-export declare type NotificationPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
++export declare type NotificationPlacement = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' | 'center';
+ export declare type IconType = 'success' | 'info' | 'error' | 'warning';
+ export interface ConfigProps {
+     top?: number;
